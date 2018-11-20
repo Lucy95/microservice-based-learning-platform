@@ -1,0 +1,57 @@
+body{
+  background-image: url("/images/dash_background.png");
+  overflow: hidden;
+}
+h1 {
+  color: #e1ea52;
+  font-family: arial, sans-serif;
+  margin: 1em auto;
+  width: 80%;
+  text-align: center;
+}
+
+.navbar-brand h2{
+    margin-top: -2px;
+    color: #303030;
+}
+.bg-faded{
+    background-color: #d9d9e780;
+}
+
+.form-inline input,select,textarea,option
+{
+	width: 250px !important;
+	height: 50px;
+	margin: 2%;
+	font-size: 18px;
+	margin-left: 5%;
+}
+
+.form-inline textarea
+{
+	width: 400px !important;
+	height: 150px;
+	margin-left: 25%;
+	font-size: 18px;
+}
+
+.form-inline
+{
+	margin-left: 11%;
+}
+
+.btn-default
+{
+	background-color:#e7b04b;
+	color: #0009;
+	width: 80px;
+	height: 40px;
+	margin-left: 38%;
+	font-weight: bold;
+}
+
+.btn-primary
+{
+	float: right;
+	margin: 1%;
+}

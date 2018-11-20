@@ -1,0 +1,86 @@
+body{
+  background-image: url("/images/study-lab-Online-Learning-banner.jpg");
+}
+
+.bg-faded{
+    background-color: #f7f7f980;
+}
+  .signup-box{
+    margin: 10%;
+    margin-left: 30%;
+    height: 350px;
+    width: 350px;
+  }
+
+  .tabs{
+    width: 350px;
+    display: block;
+    position: absolute;
+    
+}
+
+.tabs .tab{
+    float: left;
+    display: block; 
+    margin-left: -3%; 
+}
+
+.tabs .tab>input[type="radio"] {
+    position: absolute;
+   
+}
+
+.tabs .tab>label {
+    display: block;
+    padding: 6px 21px;
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    color: #FFF;
+    background: #006c9e;
+}
+
+.tabs .content {
+    z-index: 0;/* or display: none; */
+    overflow: hidden;
+    width: 350px;
+    padding: 25px;
+    min-height: 350px; 
+    position: absolute;
+    top: 27px;
+    left: 0;
+    background: #303030;
+    color: #DFDFDF;
+    
+    opacity:0;
+    transition: opacity 400ms ease-out;
+}
+
+.tabs>.tab>[id^="tab"]:checked + label {
+    top: 0;
+    background: #303030;
+    color: #F5F5F5;
+}
+
+.tabs>.tab>[id^="tab"]:checked ~ [id^="tab-content"] {
+    z-index: 1;/* or display: block; */
+    opacity: 1;
+    transition: opacity 400ms ease-out;
+}
+
+.form-control.signup-form{
+  margin-bottom: 5%;
+  margin-left:12%;
+  width: 230px;
+}
+
+.btn.btn-warning{
+  width: 100px;
+  height: 40px;
+  margin-left: 35%;
+}
+
+#student-signup{
+  margin-top: 15%;
+}

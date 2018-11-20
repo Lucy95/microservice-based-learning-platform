@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+	    <meta charset="utf-8" />
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	    <title>Courses</title>
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+		<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+   		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"/>
+   		<link rel="stylesheet" type="text/css" href="/css/course.css"/>
+	</head>
+
+	<body>
+		<nav class="navbar navbar-light bg-faded">
+			<a class="navbar-brand" href="#"><h2>ELeaRn</h2></a>
+		    <form id="login-form" method="post" action="http://localhost:8080/logout" class="form-inline">
+		  		<button style="float: right;" class="btn btn-primary" type="submit"><i class="fa fa-sign-out fa-lg fa-fw"></i>Logout</button>
+		  	</form>
+		</nav>
+		<div class="container">
+		  <div class="iconcontainer">
+		    <div class="row">
+		      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" th:each="crs : ${courses}">
+		        <div class="iconbox">
+		          <div class="iconbox-icon">
+		            <span class="glyphicon glyphicon-book"></span>
+		          </div>
+		          <div class="featureinfo">
+		            <h4 class="text-center"><p th:text="${crs.courseName}" /></h4>
+		            <p th:text="'Duration : ' + ${crs.courseDuration}  "/>
+		            <p th:text="'Tutor : ' + ${crs.courseIncharge}  "/>
+		            <p th:text="'Level : ' + ${crs.courseLevel}  "/>
+		            <p th:text="'Description: ' + ${crs.courseDescp}  "/>
+		            <a class="btn btn-default btn-sm" href="#" role="button">Enroll</a>
+		          </div>
+		        </div>
+		      </div>
+		    </div>
+		</div>
+	</div>
+	</body>
+</html>

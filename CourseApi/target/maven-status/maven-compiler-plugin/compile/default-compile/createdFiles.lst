@@ -1,0 +1,8 @@
+com\ensat\SpringBootWebApplication.class
+com\ensat\repositories\CourseRepository.class
+com\ensat\repositories\TeacherRepository.class
+com\ensat\entities\Course.class
+com\ensat\services\TeacherService.class
+com\ensat\controllers\CourseController.class
+com\ensat\entities\Teacher.class
+com\ensat\services\CourseService.class

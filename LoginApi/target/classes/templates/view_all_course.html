@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+	    <meta charset="utf-8" />
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	    <title>Courses</title>
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+		<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+   		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"/>
+   		<link rel="stylesheet" type="text/css" href="/css/course.css"/>
+	</head>
+
+	<body>
+		<nav class="navbar navbar-light bg-faded">
+			<a class="navbar-brand" href="#"><h2>ELeaRn</h2></a>
+		    <form id="login-form" method="post" action="/logout" class="form-inline">
+		  		<button style="float: right;" class="btn btn-primary" type="submit"><i class="fa fa-sign-out fa-lg fa-fw"></i>Logout</button>
+		  	</form>
+		</nav>
+		<div class="container">
+		  <div class="iconcontainer">
+		    <div class="row">
+		      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" th:each="crs : ${courses}">
+		        <div class="iconbox">
+		          <div class="iconbox-icon">
+		            <span class="glyphicon glyphicon-book"></span>
+		          </div>
+		          <div class="featureinfo">
+		            <h4 class="text-center"><p th:text="${crs.courseName}" /></h4>
+		            <p th:text="'Duration : ' + ${crs.courseDuration}  "/>
+		            <p th:text="'Tutor : ' + ${crs.courseIncharge}  "/>
+		            <p th:text="'Level : ' + ${crs.courseLevel}  "/>
+		            <p th:text="'Description: ' + ${crs.courseDescp}  "/>
+		            <form th:id="'enroll-form-'+${crs.id}" method="post" name="enroll" action="/enroll">
+		            	<input hidden="hidden" name="course_id" th:id="'crs-id-'+${crs.id}" th:value="${crs.id}">
+		            	<button class="btn btn-default btn-sm" th:id="'btn-'+${crs.id}" type="submit">Enroll</button>
+		            </form>
+		          </div>
+		        </div>
+		      </div>
+		    </div>
+		</div>
+	</div>
+	</body>
+</html>
+
+<script type="text/javascript">
+	$('.btn-sm').click(function(e)
+	{
+		e.preventDefault();
+		
+		var formID = $(this).closest('form').attr('id');
+		var id = formID.split('-')[2];
+		$("#btn-"+id).attr('disabled',true);
+		$("#"+formID).submit();
+		/*var formData = {
+    		student_id : $('#user-id-'+id).val(),
+    		course_id :  $('#crs-id-'+id).val()
+    	};
+		
+		$.ajax({
+		  url: "http://localhost:8080/enroll",
+		  type: "POST",
+		  crossOrigin: true,
+		  contentType: "application/json",
+		  headers: {
+                    "Access-Control-Allow-Origin" : "*",
+                    "Access-Control-Allow-Methods": "*",
+                    "Access-Control-Allow-Credentials": true,
+                    
+                },
+          xhrFields: {
+		    withCredentials: true
+		  },
+		  data: formData,
+		  success: function( data ) {
+		  	console.log("success");
+		  }
+		});*/
+	});
+</script>
+
+<!--<script type="text/javascript">
+	$('.btn-sm').click(function(e)
+	{
+		e.preventDefault();
+		
+		var formID = $(this).closest('form').attr('id');
+		var id = formID.split('-')[2];
+
+		var formData = {};
+		formData["student_id"] = $('#crs-id-'+id).val();
+		formData["course_id"] = $('#user-id-'+id).val();
+		$.ajax({
+		  url: "http://localhost:8888/enroll",
+		  type: "POST",
+		  crossOrigin: true,
+		  contentType: "application/json",
+		  headers: {
+                    "Access-Control-Allow-Origin" : "*",
+                    "Access-Control-Allow-Methods": "*",
+                    "Access-Control-Allow-Credentials": true,
+                    "Access-Control-Allow-Headers": "x-requested-with"
+                },
+          xhrFields: {
+		    withCredentials: true
+		  },
+		  data: JSON.stringify(formData),
+		  success: function( data ) {
+		  	console.log("success");
+		  }
+		});
+	});
+</script> -->
+
+<!--var formID = $(this).closest('form').attr('id');
+		var id = formID.split('-')[2];
+		var formData = {
+    		student_id : $('#user-id-'+id).val(),
+    		course_id :  $('#crs-id-'+id).val()
+    	};
+		
+		$.ajax({
+		  url: "http://localhost:8888/enroll",
+		  type: "POST",
+		  crossOrigin: true,
+		  contentType: "application/json",
+		  headers: {
+                    "Access-Control-Allow-Origin" : "*",
+                    "Access-Control-Allow-Methods": "*",
+                    "Access-Control-Allow-Credentials": true,
+                    "Access-Control-Allow-Headers": "x-requested-with"
+                },
+          xhrFields: {
+		    withCredentials: true
+		  },
+		  data: JSON.stringify(formData), 
+		  -->

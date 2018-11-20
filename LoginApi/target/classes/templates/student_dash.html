@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+	    <meta charset="utf-8" />
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	    <title>Elearn | Home</title>
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+		<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+   		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"/>
+   		<link rel="stylesheet" type="text/css" href="/css/dashboard.css"/>
+	</head>
+
+	<body>
+
+		<nav class="navbar navbar-light bg-faded">
+			<a class="navbar-brand" href="#"><h2>ELeaRn</h2></a>
+		    <form id="login-form" method="get" action="/signout" class="form-inline">
+		  		<button class="btn btn-primary" type="submit"><i class="fa fa-sign-out fa-lg fa-fw"></i>Logout</button>
+		  	</form>
+		</nav>
+
+		<div class="row">
+		    <div class="action-buttons">
+			    <a class="btn btn-default btn-circle"><i class="fa fa-user fa-2x"></i><h2>Profile</h2></a>
+	          		
+	          	<a class="btn btn-default btn-circle" href="/all-courses" role="button"><i class="fa fa-eye fa-2x"></i><h2>View Courses</h2></a>
+
+	          	<a class="btn btn-default btn-circle" href="/enrolled-courses"><i class="fa fa-pencil fa-2x"></i><h2>Enrolled <br/>Courses</h2></a>	
+	        </div>	        
+		</div>
+	</body>
+</html>

@@ -1,0 +1,73 @@
+body{
+  background-image: url("/images/dash_background.png");
+  overflow: hidden;
+}
+h1 {
+  color: #333;
+  font-family: arial, sans-serif;
+  margin: 1em auto;
+  width: 80%;
+}
+
+.navbar-brand h2{
+    margin-top: -2px;
+    color: black;
+}
+
+.form-inline .btn-primary{
+  float: right;
+  margin: 1%;
+}
+.bg-faded{
+    background-color: #d9d9e780;
+}
+
+/****************
+.tabs-left{
+  border-bottom: none;
+  padding-top: 2px;
+}
+.tabs-left {
+  border-right: 1px solid #ddd;
+}
+
+.tabs-left>li{
+  float: none;
+  margin-bottom: 2px;
+}
+.tabs-left>li {
+  margin-right: -1px;
+}
+
+.tabs-left>li.active>a,
+.tabs-left>li.active>a:hover,
+.tabs-left>li.active>a:focus {
+  border-bottom-color: #ddd;
+  border-right-color: transparent;
+}
+
+.tabs-left>li>a {
+  border-radius: 4px 0 0 4px;
+  margin-right: 0;
+  display:block;
+}
+*************/
+
+.btn-circle{
+  border-radius: 50% !important;
+  height: 215px !important;
+  width: 215px !important;
+  background-color: #e7ae47;
+  margin: 5%;
+
+}
+
+.action-buttons{
+  margin-left:12%;
+  margin-top: 5%;
+}
+
+.btn-circle i
+{
+  margin-top: 30%;
+}

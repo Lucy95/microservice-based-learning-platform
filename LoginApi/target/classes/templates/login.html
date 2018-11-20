@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	    <title>Capstone</title>
+	    <!-- Bootstrap -->
+	    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+		<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <!-- font awesome -->
+   		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+   		<link rel="stylesheet" type="text/css" href="/css/login.css">
+	</head>
+
+	<body>
+
+		<nav class="navbar navbar-light bg-faded">
+		   <button type="button" class="navbar-toggler hidden-sm-up" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+		   <span class="sr-only">Toggle navigation</span>
+		    <span class="icon-bar"></span>
+		    <span class="icon-bar"></span>
+		    <span class="icon-bar"></span>
+		  </button>
+		  <a class="navbar-brand" href="#"><h2>ELeaRn</h2></a>
+		    <form id="login-form" method="post" action="/login" class="form-inline pull-xs-right">
+		        <input id="email" type="email" class="form-control" name="email" value="" placeholder="Email Address" required> 
+		        <input id="password" type="password" class="form-control" name="password" value="" placeholder="Password" required>
+		        <button class="btn btn-primary" type="submit"><i class="fa fa-sign-in fa-lg fa-fw"></i>Login</button>
+		    </form>
+		</nav>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-3" style="float: left; margin-left:-12%;margin-top:2%;">
+					<div class="signup-box">
+						<ul class="tabs">
+						    <li class="tab">
+						        <input type="radio" name="tabs" checked="checked" id="tab1" />
+						        <label for="tab1">Student Signup</label>
+							        <div id="tab-content1" class="content">
+							        	<form id="student-signup" class="form-inline" action="/student-signup" method="post">
+								        	<input type="text" name="name" placeholder="Your Name" class="form-control signup-form" required >
+								         	<input id="email" type="email" class="form-control signup-form" name="email" value="" placeholder="Email Address" required> 
+				        				 	<input id="password" type="password" class="form-control signup-form" name="password" value="" placeholder="Password" required>
+				        				 	<button type="submit" class="btn btn-warning">SUBMIT</button>
+			        				 	</form>
+							        </div>
+						    </li>
+						    
+						    <li class="tab">
+						    	<input type="radio" name="tabs" id="tab2" />
+						    	<label for="tab2">Teacher Signup</label>   
+						      		<div id="tab-content2" class="content">
+							      		<form id="teacher-signup" class="form-inline" action="/teacher-signup" method="post">
+									        <input type="text" name="name" placeholder="Your Name" class="form-control signup-form" required >
+									        <input id="email" type="email" class="form-control signup-form" name="email" value="" placeholder="Email Address" required> 
+					        				<input id="password" type="password" class="form-control signup-form" name="password" value="" placeholder="Password" required>
+					        				<input type="text" name="specialisation" class="form-control signup-form" placeholder="Your Specialisation area">
+					        				<textarea placeholder="Write something about yourself" class="form-control signup-form" name="descp"></textarea>
+					        				<button type="submit" class="btn btn-warning">SUBMIT</button>
+				        				 </form>
+						       		</div>
+						    </li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.3/js/tether.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>

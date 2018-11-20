@@ -1,0 +1,11 @@
+com\ensat\repositories\EnrollRepository.class
+com\ensat\controllers\EnrollController.class
+com\ensat\SpringBootWebApplication.class
+com\ensat\repositories\CourseRepository.class
+com\ensat\repositories\StudentRepository.class
+com\ensat\entities\Course.class
+com\ensat\entities\Student.class
+com\ensat\services\EnrollService.class
+com\ensat\entities\Enroll.class
+com\ensat\services\CourseService.class
+com\ensat\services\StudentService.class
